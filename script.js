@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
         headers: {
             'content-Type': 'application/json',
         },
-        body: JSON.stringify({ inputTemp, inputUnit, outputUnit }),
+        body: JSON.stringify({ inputValue, inputUnit, outputUnit }),
     })
     .then(response => response.json())
     .then(data =>{
