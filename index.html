@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Temperature Converter</h2>
-     <form id="tempConverter">
-        <label for="inputtemp">Input Temperature:</label>
-        <input type="number" id="inputtemp" name="inputtemp" required>
-        <br>
-        <label for="inputUnit">Input Unit:</label>
-        <input type="radio" id="fahrenheitInput" name="inputUnit" value="fahrenheit"checked>
-        <label for="fahrenheitInput">Fahrenheit</label>
-        <input type="radio" id="celsiusInput" name="inputUnit" value="celsius">
-        <label for="celsiusInput">Celsius</label><br>
-        
-        <label for="outputUnit">Output Unit:</label>
-        <input type="radio" id="fahrenheitOutput" name="outputUnit" value="fahrenheit" checked>
-        <label for="fahrenheitOutput">Fahrenheit</label>
-        <input type="radio" id="celsiusOutput" name="outputUnit" value="celsius">
-        <label for="celsiusOutput">Celsius</label>
-        <br>
-        <button type="submit" id="convert">Convert</button> 
-        
-     </form>
+<div class="container">
+  <h2>Temperature Converter</h2>
+  <form id="converter-form">
+    <div>
+      <label for="input-temp">Input Temperature:</label>
+      <input type="number" id="input-temp" name="input-temp" required>
+    </div>
+    <div>
+      <label>Input Unit:</label>
+      <input type="radio" id="unit-fahrenheit" name="unit" value="fahrenheit" checked>
+      <label for="unit-fahrenheit">Fahrenheit</label>
+      <input type="radio" id="unit-celsius" name="unit" value="celsius">
+      <label for="unit-celsius">Celsius</label>
+    </div>
+    <div>
+      <label>Output Unit:</label>
+      <input type="radio" id="output-fahrenheit" name="output-unit" value="fahrenheit" checked>
+      <label for="output-fahrenheit">Fahrenheit</label>
+      <input type="radio" id="output-celsius" name="output-unit" value="celsius">
+      <label for="output-celsius">Celsius</label>
+    </div>
+    <button type="submit">Convert</button>
+  </form>
+  <div id="result"></div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
