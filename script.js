@@ -6,23 +6,6 @@ document.addEventListener("DOMContentLoaded", function(){
     const inputUnit = document.getElementById('input[name="unit"]:checked').value;
     const outputUnit = document.getElementById('input[name="output-unit"]:checked').value;
 
-    inputValue.addEventListener('input', validateInput);
-
-    form.addEventListener('submit', function(event){
-        if(!validateInput){
-            event.preventDefault();
-        }
-    })
-
-    function validateInput() {
-        const inputRegex = /^-?\d*\.?\d*$/; // Regular expression to match decimal or integer
-    
-        if (!inputRegex.test(inputValue)) {
-            alert('Invalid input')
-            input.value = '';
-        }
-    }
-
     fetch('converter.php', {
         method: 'POST',
         headers: {
